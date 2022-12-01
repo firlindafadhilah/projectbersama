@@ -1,0 +1,231 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>UNTIRTA</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  </head>
+
+<body>
+    <!--bagian navbar-->
+    <nav class="navbar navbar-expand-lg" style="background-color:#000000;">
+      <div class="container-fluid">
+        <img src="{% static 'logo.png' %}" alt="Logo" width="60" height="60" class="d-inline-block align-text-top">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <font size="7"><strong><a class="nav-link {% if navbar == 'index' %} active {% endif %}" aria-current="page" href="{% url 'index' %}" style="color:	#FFFFFF">Lets Learn</a></strong></font>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {% if navbar == 'profile' %} active {% endif %}" href="{% url 'profile' %}" style="color:	#FFFFFF">PROFILE</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:	#FFFFFF">
+                HIMPUNAN
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark" style="background-color:#ffffff;">
+                <li><a class="dropdown-item {% if dropdown == 'pendahuluan' %} active {% endif %}" href="{% url 'pendahuluan' %}" style="color:	#000000">PENDAHULUAN</a></li>
+
+                <li><a class="dropdown-item {% if dropdown == 'notasi' %} active {% endif %}" href="{% url 'notasi' %}" style="color:	#000000">KONSEP DAN NOTASI HIMPUNAN</a></li>
+
+                <li><a class="dropdown-item {% if dropdown == 'kubus' %} active {% endif %}" href="{% url 'kubus' %}" style="color:	#000000">HIMPUNAN KOSONG DAN HIMPUNAN SEMESTA</a></li>
+
+                <li><a class="dropdown-item {% if dropdown == 'limas' %} active {% endif %}" href="{% url 'limas' %}" style="color:	#000000">HIMPUNAN BAGIAN</a></li>
+
+                <li><a class="dropdown-item {% if dropdown == 'prisma' %} active {% endif %}" href="{% url 'prisma' %}" style="color:	#000000">HUBUNGAN ANTAR HIMPUNAN</a></li>
+                
+                <li><a class="dropdown-item {% if dropdown == 'prisma' %} active {% endif %}" href="{% url 'prisma' %}" style="color:	#000000">OPERASI HIMPUNAN</a></li>
+
+                <li><a class="dropdown-item {% if dropdown == 'prisma' %} active {% endif %}" href="{% url 'prisma' %}" style="color:	#000000">DIAGRAM VENN</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {% if navbar == 'about' %} active {% endif %}" href="{% url 'about' %}" style="color:#FFFFFF"">TENTANG</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:	#FFFFFF">
+                MAHASISWA</a>
+              <ul class="dropdown-menu dropdown-menu-dark" style="background-color:#ffffff;">
+                <li><a class="dropdown-item {% if dropdown == 'mahasiswa' %} active {% endif %}" href="{% url 'mahasiswa' %}" style="color:	#000000">Mahasiswa</a></li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" >
+            <button class="btn btn-outline-success" type="submit" style="color:#FFFFFF">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+      <!--penutup navbar-->
+
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+      <br></br>
+      <section class="container">
+    <center>
+          <font size="6"><strong>BAB 2
+          <p>HIMPUNAN KOSONG DAN HIMPUNAN SEMESTA</p>
+      </strong></font>
+      <iframe style="width: 400px;height: 290px;"type="text/html" src="https://www.youtube.com/embed/SuWFF2Eayj4?autoplay=1&origin=wibloog.com" frameborder="5"></iframe>
+    </center>
+      <font size="5">
+      <ol>
+        <h3><strong>3.1 HIMPUNAN KOSONG DAN HIMPUNAN NOL</strong></h3>
+        <p align="justify">Jika P adalah himpunan segitiga yang mempunyai 2 buah sisi maka anggota P tidak ada atau kosong. Himpunan P disebut himpunan kosong (tidak mempunyai anggota), karena jumlah sisi persegi adalah empat.</p>
+        <br>
+        <p><strong>"Himpunan kosong adalah himpunan yang tidak mempunyai anggota, dan dinotasikan dengan { } atau ∅ (Nuharini, 2007, p. 169)".</strong></p>
+        <br>
+        <p align="justify">Jika P = {x | x < 1, x ∈ C} maka P = {0} atau n(P) = 1. Himpunan P disebut himpunan nol. Anggota himpunan R adalah 0. Jadi, himpunan R bukan merupakan himpunan kosong.</p>
+        <br>
+        <p><strong>Himpunan nol adalah himpunan yang hanya mempunyai 1 anggota, yaitu nol (0) (Nuharini, 2007, p. 170)</strong></p>
+      </ol>
+      <br>
+      <h3><strong>A. Unsur-unsur Kubus</strong></h3>
+      <ol>
+            <li>1. Bidang atau Sisi</li>
+              <p>Sisi kubus adalah bidang yang membatasi kubus, pada kubus terdapat 6 buah sisi yang berbentuk persegi, pada gambar diatas terdapat pada : ABCD (sisi bawah), ABEF (sisi depan), EFGH (sisi atas), CDGH (sisi belakang), BCFG (sisi samping kanan), dan ADEH(sisi samping kiri).</p>
+        <br>
+            <li>2. Rusuk</li>
+              <p>Rusuk kubus adalah garis potong antara dua sisi bidang kubus dan terlihat seperti kerangka yang menyusun kubus. Pada gambar diatas terdapat 12 rusuk kubus, yaitu : AB, BC, CD, DA, EF, FG, GH, HE, AE, DH, BF, dan CG.</p>
+        <br>
+            <li>3. Titik Sudut</li>
+              <p>Titik sudut adalah titik potong yang berada diantara dua rusuk. Pada gambar diatas terdapat 8 titik sudut pada kubus, yaitu : A, B, C, D, E, F, G, dan H.</p>
+        <br>
+            <li>4. Diagonal Bidang</li>
+              <p>Diagonal bidang adalah garis yang menghubungkan dua titik dalam satu sisi atau bidang. Pada kubus, diagonal bidang membentuk dua buah segitiga siku-siku.</p>
+              
+          <p>Perhatikan gambar diatas, pada gambar tersebut terdapat 12 diagonal bidang yang sama panjang, yaitu : AF, EB, AC, BD, BG, FC, EG, HF, DE, AH, DG, dan HC.</p>
+        <br>
+            <li>5. Diagonal Ruang</li>
+              <p>Diagonal ruang adalah ruas garis yang menghubungkan dua titik sudut yang saling berhadapan dalam satu ruang.</p>
+              
+          <p>Perhatikan gambar diatas, pada gambar tersebut terdapat 4 diagonal ruang yang sama panjang, yaitu : AG, BH, EC, dan FD.</p>
+        <br>    
+            <li>6. Bidang Diagonal</li>
+              <p>Bidang diagonal kubus adalah bidang yang melalui dua rusuk yang saling berhadapan.</p>
+              
+          <p>Perhatikan gambar diatas, pada gambar tersebut terdapat 6 bidang diagonal, yaitu : AECG, BFDH, ADFG, BCEH, EFDC, dan ABHG.</p>
+        </ol>
+    
+    <br>
+        <h3><strong>B. Sifat-sifat Kubus</strong></h3>
+        <ol>
+        <table border="3" cellpadding="10">
+        <tr bgcolor="dodgerblue">
+          <td><strong><center>No</center></strong></td>
+          <td><strong><center>Sifat-Sifat Kubus</center></strong></td>
+          <td><strong><center>Bagian-bagian</center></strong></td>
+        </tr>
+        <tr>
+          <td bgcolor="lightblue">1.</td>
+          <td bgcolor="lightblue">Kubus memiliki 6 bidang atau sisi yang saling kongruen.</td>
+          <td bgcolor="lightblue">Sisi bawah (ABCD), Sisi depan (ABEF), Sisi atas (EFGH), Sisi samping kanan (BCFG) dan Sisi samping kiri (ADEH).</td>
+        </tr>
+        <tr>
+          <td bgcolor="lightblue">2.</td>
+          <td bgcolor="lightblue">Kubus memiliki 12 buah rusuk yang sama panjang.</td>
+          <td bgcolor="lightblue">AB, BC, CD, DA, EF, FG, GH, HE, AE, DH, BF, dan CG.</td>
+        </tr>
+        <tr>
+          <td bgcolor="lightblue">3.</td>
+          <td bgcolor="lightblue">Kubus memiliki 8 titik sudut.</td>
+          <td bgcolor="lightblue">A, B,C, D, E, F dan G.</td>
+        </tr>
+        <tr>
+          <td bgcolor="lightblue">4.</td>
+          <td bgcolor="lightblue">Kubus memiliki 12 diagonal bidang yang sama panjang.</td>
+          <td bgcolor="lightblue">AF, EB, AC, BD, BG, FC, EG, HF, DE, AH, DG dan HC.</td>
+        </tr>
+        <tr>
+          <td bgcolor="lightblue">5.</td>
+          <td bgcolor="lightblue">Kubus memiliki 4 diagonal ruang yang sama panjang dan berpotongan disatu titik.</td>
+          <td bgcolor="lightblue">AG, BH, EC dan FD.</td>
+        </tr>
+        <tr>
+          <td bgcolor="lightblue">6.</td>
+          <td bgcolor="lightblue">Kubus memiliki 6 bidang diagonal persegi panjang yang saling kongruen.</td>
+          <td bgcolor="lightblue">AECG, BFDH, ADFG, BCEH dan ABHG.</td>
+        </tr>
+      </table>
+      </ol>
+    
+    <br>
+      <h3><strong>C. Luas Permukaan Kubus</strong></h3>
+      <ol>
+        <p>Luas permukaan kubus adalah jumlah luas seluruh sisi pada suatu kubus. Jumlah sisi kubus ada 6, jadi rumus luas permukaan kubus adalah 6 x luas persegi, rumus luas persegi adalah sisi x sisi (s<sup>2</sup>), maka luas permukaan kubus adalah 6s<sup>2</sup>.</p>
+        <p>
+          Luas Permukaan Kubus = 6s<sup>2</sup>
+        </p>
+      </ol>
+    
+    <br>
+      <h3><strong>D. Volume Kubus</strong></h3>
+      <ol>
+        <p>Volume kubus adalah perkalian panjang, lebar dan tingi kubus, karena panjang sisi kubus adalah sama, jadi rumus volume kubus adalah s x s x s (s<sup>3</sup>), maka rumus volume kubus adalah (V = s<sup>3</sup>).</p>
+        <p>
+          Volume Kubus = s<sup>3</sup>
+        </p>
+      </ol> 
+    
+    <br>
+      <h3><strong>E. Jaring-jaring Kubus</strong></h3>
+      <ol>
+          
+        <p>
+          Jaring-jaring kubus adalah bangun datar dari bukaan kubus yang apabila dipotong membentuk rusuk-rusuknya, kemudian tiap sisinya direntangkan akan menghasilkan jaring-jaring kubus juga. Jaring-jaring kubus terdiri dari 6 buah persegi yang saling kogruen.
+        </p>
+      </ol>
+    
+    <br>
+      <h3><strong>F. Ringkasan Kubus</strong></h3>
+      <ol>
+        <p>Kubus adalah bangun ruang yang dibatasi oleh 6 buah sisi yang berbentuk persegi yang berukuran sama. Kubus termasuk bangun ruang prisma persegi. </p>
+        <br>
+        <li>1. Unsur-unsur Kubus</li>
+        <ul>
+          <li>a. 12 rusuk yang sama Panjang.</li>
+          <li>b. 6 bidang yang kongruen yang berbentuk persegi. </li>
+          <li>c. 8 titik sudut.</li>
+          <li>d. 12 diagonal sisi yang sama Panjang.</li>
+          <li>e. 4 diagonal ruang yang sama Panjang.</li>
+          <li>f. 6 bidang diagonal yang berbentuk persegi panjang berukuran sama</li>
+        </ul>
+        <br>
+        <li>2. Rumus pada Kubus</li>
+        <ul>
+          <li>a. Panjang diagonal bidang = s&#8730;2</li>
+          <li>b. Panjang diagonal ruang = s&#8730;3</li>
+          <li>c. Panjang kerangka = 12s</li>
+          <li>d. Luas bidang diagonal = s<sup>2</sup>&#8730;3 </li>
+          <li>e. Luas permukaan = 6s<sup>2</sup> </li>
+          <li>f. Volume = s<sup>3</sup></li>
+        </ul>
+      </ol>
+    
+    <br>
+      <h3><strong>G. Latihan</strong></h3>
+      <ol>
+        <li>1. Sebuah kubus memiliki panjang rusuk 25cm. tentukan volume dan luas permukaan kubus tersebut!</li>
+        <br>
+        <li>2. Sebuah penampungan air berbentuk kubus dengan volume 216cm<sup>3</sup>. luas permukaan penampungan air tersebut adalah ...</li>
+        <br>
+        <li>3. Sebuah kolam renang berbentuk kubus dengan kedalama 3 meter. Volume kolam renang tersebut adalah ... m<sup>3</sup>.</li>
+        <br>
+        <li>4. Keliling sebuah kubus 228 cm. Volume dan luas kubus tersebut adalah ...</li>
+        <br>
+        <li>5. Tentukan panjang rusuk kubus jika luas permukaan kubus : 
+          <ul>
+            <li>a. 96cm<sup>2</sup></li>
+            <li>b. 486cm<sup>2</sup></li>
+          </ul>
+      </ol>
+      </font> 
+    </section>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+      </body>
+    </html>

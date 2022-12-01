@@ -1,0 +1,89 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>UNTIRTA JAWARA</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  </head>
+
+<body>
+    <!--bagian navbar-->
+    <nav class="navbar navbar-expand-lg" style="background-color:#8FBC8F;">
+      <div class="container-fluid">
+        <img src="{% static 'logo.png' %}" alt="Logo" width="60" height="60" class="d-inline-block align-text-top">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <font size="7"><strong><a class="nav-link {% if navbar == 'index' %} active {% endif %}" aria-current="page" href="{% url 'index' %}" style="color:	#FFFFFF">Lets Learn</a></strong></font>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {% if navbar == 'profile' %} active {% endif %}" href="{% url 'profile' %}" style="color:	#FFFFFF">PROFILE</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:	#FFFFFF">
+                HIMPUNAN
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark" style="background-color:#ffffff;">
+                <li><a class="dropdown-item {% if dropdown == 'pendahuluan' %} active {% endif %}" href="{% url 'pendahuluan' %}" style="color:	#000000">APPLET GEOGEBRA</a></li>
+
+                <li><a class="dropdown-item {% if dropdown == 'notasi' %} active {% endif %}" href="{% url 'notasi' %}" style="color:	#000000">KONSEP DAN NOTASI HIMPUNAN</a></li>
+
+                <li><a class="dropdown-item {% if dropdown == 'kubus' %} active {% endif %}" href="{% url 'kubus' %}" style="color:	#000000">KUBUS</a></li>
+
+                <li><a class="dropdown-item {% if dropdown == 'limas' %} active {% endif %}" href="{% url 'limas' %}" style="color:	#000000">LIMAS</a></li>
+
+                <li><a class="dropdown-item {% if dropdown == 'prisma' %} active {% endif %}" href="{% url 'prisma' %}" style="color:	#000000">PRISMA</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {% if navbar == 'about' %} active {% endif %}" href="{% url 'about' %}" style="color:#FFFFFF">TENTANG</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:	#FFFFFF">
+                MAHASISWA</a>
+              <ul class="dropdown-menu dropdown-menu-dark" style="background-color:#ffffff;">
+                <li><a class="dropdown-item {% if dropdown == 'mahasiswa' %} active {% endif %}" href="{% url 'mahasiswa' %}" style="color:	#000000">Mahasiswa</a></li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" >
+            <button class="btn btn-outline-success" type="submit" style="color:#FFFFFF">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+      <!--penutup navbar-->
+
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+      <br></br>
+      <section class="container">
+        <font size="8"><strong><center>KATA PENGANTAR</center></strong></font>
+      <br>
+      <p>Syukur alhamdulillah penulis panjatkan ke hadirat Allah SWT., yang telah memberikan hidayah dan inayah-Nya sehingga penulis dapat menyelesaikan buku siswa tentang “Himpunan” dengan baik.</p>
+    </br>
+    <br>
+      <p>Buku siswa ini merupakan salah satu bahan ajar mata pelajaran Matematika untuk pegangan siswa pada jenjang Sekolah Menengah Pertama/Madrasah Tsanawiyah berdasarkan Kurikulum 2013 dengan tujuan untuk membantu siswa dalam proses belajar Matematika mengenai Himpunan. </p>
+    </br>
+    <br>
+      <p>Isi materi  Himpunan dalam buku siswa ini berupa kegiatan pembelajaran yang menuntut siswa secara aktif untuk terlibat dalam pembelajaran sehingga siswa akan mendapatkan pengalaman yang diharapkan. Buku siswa ini menjabarkan usaha minimal yang harus dilakukan siswa untuk mencapai kompetensi yang diharapkan. Peran guru sangat penting untuk meningkatkan dan menyesuaikan daya serap siswa dengan ketersedian kegiatan pada buku ini.</p>
+    </br>
+    <br>
+      <p>Setelah mempelajari materi Himpunan dalam Buku Siswa ini, diharapkan siswa mampu memahami materi yang disajikan. Oleh karena itu, konsep-konsep yang disajikan dalam buku ini disampaikan secara logis, sistematis, dan menggunakan bahasa yang sederhana. Selain itu, buku ini juga memiliki tampilan yang menarik sehingga siswa tidak bosan.</p>
+    </br>
+    <br>
+      <p>Dalam penyusunan buku ini, penulis berusaha semaksimal mungkin untuk mendapatkan sumber dan informasi dari buku-buku yang direkomendasikan oleh dosen ataupun website terpercaya. Terima kasih kepada dosen pengampu yang telah membimbing penulis dalam menyusun buku siswa ini hingga selesai. Akhir kata penulis berharap semoga buku siswa ini dapat bermanfaat dan semaksimal mungkin dapat dijadikan sebagai pendamping belajar. Penulis juga sangat mengharapkan saran dan kritik yang membangun untuk lebih menyempurnakan penulisan buku ini.</p>
+    </br>
+    <br>
+      <p>Serang, Maret 2022</p>
+    <P>Penulis</P>
+    </br>
+    </section>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+      </body>
+    </html>

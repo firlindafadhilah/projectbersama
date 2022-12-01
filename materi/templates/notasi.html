@@ -1,0 +1,143 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>UNTIRTA JAWARA</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  </head>
+
+<body>
+    <!--bagian navbar-->
+    <nav class="navbar navbar-expand-lg" style="background-color:#000000;">
+      <div class="container-fluid">
+        <img src="{% static 'logo.png' %}" alt="Logo" width="60" height="60" class="d-inline-block align-text-top">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <font size="7"><strong><a class="nav-link {% if navbar == 'index' %} active {% endif %}" aria-current="page" href="{% url 'index' %}" style="color:	#FFFFFF">Lets Learn</a></strong></font>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {% if navbar == 'profile' %} active {% endif %}" href="{% url 'profile' %}" style="color:	#FFFFFF">PROFILE</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:	#FFFFFF">
+                HIMPUNAN
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark" style="background-color:#ffffff;">
+                <li><a class="dropdown-item {% if dropdown == 'pendahuluan' %} active {% endif %}" href="{% url 'pendahuluan' %}" style="color:	#000000">PENDAHULUAN</a></li>
+
+                <li><a class="dropdown-item {% if dropdown == 'notasi' %} active {% endif %}" href="{% url 'notasi' %}" style="color:	#000000">KONSEP DAN NOTASI HIMPUNAN</a></li>
+
+                <li><a class="dropdown-item {% if dropdown == 'kubus' %} active {% endif %}" href="{% url 'kubus' %}" style="color:	#000000">HIMPUNAN KOSONG DAN HIMPUNAN SEMESTA</a></li>
+
+                <li><a class="dropdown-item {% if dropdown == 'limas' %} active {% endif %}" href="{% url 'limas' %}" style="color:	#000000">HIMPUNAN BAGIAN</a></li>
+
+                <li><a class="dropdown-item {% if dropdown == 'prisma' %} active {% endif %}" href="{% url 'prisma' %}" style="color:	#000000">HUBUNGAN ANTAR HIMPUNAN</a></li>
+                
+                <li><a class="dropdown-item {% if dropdown == 'prisma' %} active {% endif %}" href="{% url 'prisma' %}" style="color:	#000000">OPERASI HIMPUNAN</a></li>
+
+                <li><a class="dropdown-item {% if dropdown == 'prisma' %} active {% endif %}" href="{% url 'prisma' %}" style="color:	#000000">DIAGRAM VENN</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {% if navbar == 'about' %} active {% endif %}" href="{% url 'about' %}" style="color:#FFFFFF">TENTANG</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:	#FFFFFF">
+                MAHASISWA</a>
+              <ul class="dropdown-menu dropdown-menu-dark" style="background-color:#ffffff;">
+                <li><a class="dropdown-item {% if dropdown == 'mahasiswa' %} active {% endif %}" href="{% url 'mahasiswa' %}" style="color:	#000000">Mahasiswa</a></li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" >
+            <button class="btn btn-outline-success" type="submit" style="color:#FFFFFF">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+      <!--penutup navbar-->
+
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+      <br></br>
+      <section class="container">
+        
+      <center>
+      <font size="6"><strong>BAB 1
+      <p>KONSEP DAN NOTASI HIMPUNAN</p>
+    </strong></font>
+    <iframe style="width: 400px;height: 290px;"type="text/html" src="https://www.youtube.com/embed/PbjTeOoi26c?autoplay=1&origin=wibloog.com" frameborder="5"></iframe>
+      </center>
+      <br></br>
+      <br></br>
+      <font size="5">
+      <ol>
+        <h3><strong>2.1 KONSEP HIMPUNAN</strong></h3>
+        <p align="justify">Di dalam kehidupan sehari-hari, kata himpunan ini dipadankan dengan kumpulan, kelompok, grup, atau gerombolan. Dalam biologi misalnya, kita mengenal kelompok flora dan fauna. Di dalamnya, masih ada lagi kelompok vertebrata, kelompok invertebrata, kelompok dikotil, dan kelompok monokotil (As’ari, Abdur Rahman, Mohammad Tohir, 2017, p. 113)</P>
+          <br>
+          <p align="justify">Himpunan adalah kumpulan benda atau objek yang dapat didefinisikan dengan jelas, sehingga dengan tepat dapat diketahui objek yang termasuk himpunan dan yang tidak termasuk dalam himpunan tersebut.</p>
+        </br>
+        <p>Sekarang, perhatikan kumpulan berikut ini. 
+          <p>a. Kumpulan lukisan indah</p>
+          <p>b. Kumpulan wanita cantik</p>
+          <p align="justify">Kumpulan lukisan indah dan wanita cantik tidak bisa disebut himpunan, karena pendapat orang tentang lukisan indah dan wanita cantik berbeda-beda. Dengan kata lain, kumpulan lukisan indah dan wanita cantik tidak dapat didefinisikan dengan jelas.</p>
+        </p>
+      </br>
+      </ol>
+    <br>
+        <h3><strong>2.2 NOTASI HIMPUNAN</strong></h3>
+      <ol>
+        <p align="justify">Suatu himpunan biasanya dilambangkan dengan huruf kapital A, B, C, ..., Z. Adapun benda atau objek yang terdapat dalam himpunan ditulis dengan menggunakan sepasang kurung kurawal {...}.</p>
+             <br>
+        <p align="justify">Setiap benda atau objek yang berada dalam suatu himpunan disebut anggota atau elemen dari himpunan itu dan dinotasikan dengan ∈. Adapun benda atau objek yang tidak termasuk dalam suatu himpunan dikatakan bukan anggota himpunan dan dinotasikan dengan ∉ (Nuharini, 2007, p. 165).</p>
+            <br>
+            <p><strong>"Banyaknya anggota himpunan A dinyatakan dengan n(A)".</strong></p>
+      </br>
+        <h3><strong>2.3 RANGKUMAN</strong></h3>
+        <p align="justify">1. Himpunan adalah kumpulan benda atau objek yang ciri-cirinya jelas, sehingga dengan tepat dapat diketahui objek yang termasuk himpunan dan yang tidak termasuk dalam himpunan tersebut.</p>
+        <p align="justify">2. Suatu himpunan biasanya dilambangkan dengan huruf besar (kapital) A, B, C, ..., Z. Adapun benda atau objek yang termasuk dalam himpunan tersebut ditulis dengan menggunakan pirisan danasangan kurung kurawal {...}. </p>
+        <p align="justify">3. Suatu himpunan dapat dinyatakan dengan tiga cara, yaitu dengan kata-kata, dengan notasi pembentuk himpunan, dan dengan mendaftar anggota-anggotanya.</p>
+        <h3><strong>2.4 LATIHAN</strong></h3>      
+          <p>1.	Di antara kelompok atau kumpulan berikut, tentukan yang termasuk himpunan dan bukan himpunan, berikan alasan yang mendukung.</p>
+          <p>a. Kumpulan kendaraan bermotor</p>
+          <p>b. Kelompok negara-negara di Asia Tenggara</p>
+          <p>c. Kelompok binatang serangga</p>
+          <p>d. Kumpulan orang-orang pendek</p>
+          <p>e. Kelompok bilangan kecil</p>
+          <br>
+          <h3><strong>JAWABAN</strong></h3>
+          <p>A.	Kumpulan kendaraan bermotor</p>
+            <p>Batasannya jelas, yaitu bermotor, maka kumpulan ini termasuk himpunan.</p>
+              <p>B.	Kelompok negara-negara di Asia Tenggara</p>
+                <p>Batasannya jelas, yaitu di Asia Tenggara, maka kumpulan ini termasuk himpunan.</P>
+              <p>C.	Kelompok binatang serangga</p>
+              <p>Batasannya jelas, yaitu di serangga, maka kumpulan ini termasuk himpunan.</p>
+              <p>D.	Kumpulan orang-orang pendek.</p>
+               <p>Batasannya kurang jelas, definisi pendek tiap orang berbeda, maka kumpulan ini bukan himpunan.</p>
+              <p>E.	Kumpulan bilangan kecil.</p>
+                <p>Batasannya kurang jelas, definisi kecil tiap orang berbeda, maka kumpulan ini bukan himpunan.</p>  
+              <br>
+          <p>2.	Nyatakan himpunan berikut dengan menggunakan tanda kurung kurawal.</p>
+            <p>a. A adalah himpunan nama-nama hari dalam seminggu.</p>
+            <p>b. M adalah himpunan binatang pemakan rumput. </p>
+            <p>c. N adalah himpunan bilangan ganjil kurang dari 15. </p>
+            <p>d. B adalah himpunan planet-planet dalam tata surya.</p>
+            <br>
+            <h3><strong>JAWABAN</strong></h3>  
+              <p>A = { senin, selasa, rabu, kamis, jum'at , sabtu, minggu}
+              <p>M= {kambing, sapi, kuda, kerbau, rusa }</p>
+              <p>N = {1, 3, 5, 7, 9, 11, 13}</p>
+              <p>B = { merkurius, venus, bumi , mars, saturnus, uranus , neptunus, yupiter}</p>
+              </br>
+      </ol>
+      </font> 
+      </section>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+      </body>
+    </html>
