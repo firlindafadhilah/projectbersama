@@ -16,14 +16,23 @@ def pendahuluan(request):
 def notasi(request):
     template = loader.get_template('notasi.html')
     return HttpResponse(template.render())
+def kosong(request):
+    template = loader.get_template('kosong.html')
+    return HttpResponse(template.render())
+def bagian(request):
+    template = loader.get_template('bagian.html')
+    return HttpResponse(template.render())
+def hubungan(request):
+    template = loader.get_template('hubungan.html')
+    return HttpResponse(template.render())
+def operasi(request):
+    template = loader.get_template('operasi.html')
+    return HttpResponse(template.render())
+def diagram(request):
+    template = loader.get_template('diagram.html')
+    return HttpResponse(template.render())
 def kubus(request):
     template = loader.get_template('kubus.html')
-    return HttpResponse(template.render())
-def limas(request):
-    template = loader.get_template('limas.html')
-    return HttpResponse(template.render())
-def prisma(request):
-    template = loader.get_template('prisma.html')
     return HttpResponse(template.render())
 def profile(request):
     template = loader.get_template('profile.html')

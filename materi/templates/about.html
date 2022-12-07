@@ -30,15 +30,19 @@
                 HIMPUNAN
               </a>
               <ul class="dropdown-menu dropdown-menu-dark" style="background-color:#ffffff;">
-                <li><a class="dropdown-item {% if dropdown == 'pendahuluan' %} active {% endif %}" href="{% url 'pendahuluan' %}" style="color:	#000000">APPLET GEOGEBRA</a></li>
+                <li><a class="dropdown-item {% if dropdown == 'pendahuluan' %} active {% endif %}" href="{% url 'pendahuluan' %}" style="color:	#000000">PENDAHULUAN</a></li>
 
                 <li><a class="dropdown-item {% if dropdown == 'notasi' %} active {% endif %}" href="{% url 'notasi' %}" style="color:	#000000">KONSEP DAN NOTASI HIMPUNAN</a></li>
 
-                <li><a class="dropdown-item {% if dropdown == 'kubus' %} active {% endif %}" href="{% url 'kubus' %}" style="color:	#000000">KUBUS</a></li>
+                <li><a class="dropdown-item {% if dropdown == 'kosong' %} active {% endif %}" href="{% url 'kosong' %}" style="color:	#000000">HIMPUNAN KOSONG DAN HIMPUNAN SEMESTA</a></li>
 
-                <li><a class="dropdown-item {% if dropdown == 'limas' %} active {% endif %}" href="{% url 'limas' %}" style="color:	#000000">LIMAS</a></li>
+                <li><a class="dropdown-item {% if dropdown == 'bagian' %} active {% endif %}" href="{% url 'bagian' %}" style="color:	#000000">HIMPUNAN BAGIAN</a></li>
 
-                <li><a class="dropdown-item {% if dropdown == 'prisma' %} active {% endif %}" href="{% url 'prisma' %}" style="color:	#000000">PRISMA</a></li>
+                <li><a class="dropdown-item {% if dropdown == 'hubungan' %} active {% endif %}" href="{% url 'hubungan' %}" style="color:	#000000">HUBUNGAN ANTAR HIMPUNAN</a></li>
+                
+                <li><a class="dropdown-item {% if dropdown == 'operasi' %} active {% endif %}" href="{% url 'operasi' %}" style="color:	#000000">OPERASI HIMPUNAN</a></li>
+
+                <li><a class="dropdown-item {% if dropdown == 'diagram' %} active {% endif %}" href="{% url 'diagram' %}" style="color:	#000000">DIAGRAM VENN</a></li>
               </ul>
             </li>
             <li class="nav-item">
