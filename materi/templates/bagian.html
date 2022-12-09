@@ -1,15 +1,7 @@
+{% extends 'base.html' %}
 {% load static %}
+{% block content %}
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>UNTIRTA</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-  </head>
-
-<body>
     <!--bagian navbar-->
     <nav class="navbar navbar-expand-lg" style="background-color:#000000;">
       <div class="container-fluid">
@@ -19,7 +11,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
+            <li class="nav-brand">
               <font size="7"><strong><a class="nav-link {% if navbar == 'index' %} active {% endif %}" aria-current="page" href="{% url 'index' %}" style="color:	#FFFFFF">Lets Learn</a></strong></font>
             </li>
             <li class="nav-item">
@@ -29,7 +21,7 @@
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:	#FFFFFF">
                 HIMPUNAN
               </a>
-              <ul class="dropdown-menu dropdown-menu-dark" style="background-color:#ffffff;">
+              <ul class="dropdown-menu" style="background-color:#ffffff;">
                 <li><a class="dropdown-item {% if dropdown == 'pendahuluan' %} active {% endif %}" href="{% url 'pendahuluan' %}" style="color:	#000000">PENDAHULUAN</a></li>
 
                 <li><a class="dropdown-item {% if dropdown == 'notasi' %} active {% endif %}" href="{% url 'notasi' %}" style="color:	#000000">KONSEP DAN NOTASI HIMPUNAN</a></li>
@@ -55,7 +47,7 @@
                 <li><a class="dropdown-item {% if dropdown == 'mahasiswa' %} active {% endif %}" href="{% url 'mahasiswa' %}" style="color:	#000000">Mahasiswa</a></li>
           </ul>
           <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" >
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success" type="submit" style="color:#FFFFFF">Search</button>
           </form>
         </div>
@@ -71,217 +63,113 @@
       <font size="6"><strong>BAB 3
       <p>HIMPUNAN BAGIAN</p>
       </strong></font>
+      <iframe style="width: 400px;height: 290px;"type="text/html" src="https://www.youtube.com/embed/WalksHefHeg?autoplay=1&origin=wibloog.com" frameborder="5"></iframe>
       </center>
       <font size="5">
+        <h3><strong>4.1 PENGERTIAN HIMPUNAN BAGIAN</strong></h3>
+        <ol>
+        <p align="justify">Agar kalian dapat lebih memahami tentang himpunan bagian, perhatikan himpunan-himpunan berikut.
+          <p>A = {1, 2, 3} 
+          <p>B = {4, 5, 6} 
+          <p>C = {1, 2, 3, 4, 6} 
+        <p align="justify">Berdasarkan ketiga himpunan di atas, terlihat bahwa setiap anggota himpunan A, yaitu 1, 2, 3 juga menjadi anggota himpunan C. Dalam hal ini bisa dikatakan bahwa himpunan A merupakan himpunan bagian dari C, ditulis A ⊂ C atau C ⊃ A. 
+          </p>
+      <br>
+      <p>Himpunan A merupakan himpunan bagian B, jika setiap anggota A juga menjadi anggota B dan dinotasikan A ⊂ B atau B ⊃ A (Nuharini, 2007, p. 172).</p>
+      <br>
+      <p>Sekarang perhatikan himpunan B dan himpunan C. 
+        <p>B = {4, 5, 6} 
+        <p>C = {1, 2, 3, 4, 5} 
+      <p align="justify">Terlihat bahwa tidak setiap anggota B menjadi anggota C, karena 6 ∉ C. Dikatakan bahwa B bukan merupakan himpunan bagian dari C, ditulis B  ⊄ C. (B  ⊄ C dibaca: B bukan himpunan bagian dari C). 
+        </p>
+      <br>
+      <p align="justify">Himpunan A bukan merupakan himpunan bagian B, jika terdapat anggota A yang bukan anggota B, dan dinotasikan A  ⊄ B (Nuharini, 2007, p. 172).          <br>
+      </p>
+    </ol>
+    <br>
+    <br>
+      <h3><strong>4.2 MENENTUKAN BANYAKNYA HIMPUNAN BAGIAN DARI SUATU HIMPUNAN</strong></h3>
       <ol>
-        <p>Limas adalah bangun ruang tiga dimensi yang dibatasi oleh alas berbentuk segi-n dan sisi-sisi tegak berbentuk segitiga.</p>
+      <table class="table">
+        <thead class="table-success">
+          <td><strong><center>HIMPUNAN</center></strong></td>
+          <td><strong><center>BANYAKNYA ANGGOTA</center></strong></td>
+          <td><strong><center>HIMPUNAN BAGIAN</center></strong></td>
+          <td><strong><center>BANYAKNYA HIMPUNAN BAGIAN</center></strong></td>
+        </thead>
+        <tbody>
+          <td><center>{a}</center></td>
+          <td><center>1</td></center>
+          <td><center>{ } <P>{a}</P></td></center>
+          <td><center>2 = 2<sup>1</sup></td></center>
+        </tbody>
+        <tbody>
+          <td><center>{a, b}</center></td>
+          <td><center>2</td></center>
+          <td><center>{ }<p>{a}, {b}<p>{a, b}</p></td></center>
+          <td><center>4 = 2<sup>2</sup></td></center>
+        </tbody>
+        <tbody>
+        <td><center>{a, b, c}</center></td>
+        <td><center>3</td></center>
+        <td><center>{ } 
+          <p>{a}, {b}, {c}<p>{a, b}, {a, c}, {b, c}<p>{a, b, c}</p></td></center>
+        <td><center>8 = 2<sup>3</sup></td></center>
+        </tbody>
+        <tbody>
+        <td><center>{a, b, c, d}</center></td>
+          <td><center>4</td></center>
+          <td><center>{ } 
+            <p>{a}, {b}, {c}, {d} 
+            <p>{a, b}, {a, c}, {a, d}, {b, c}, { b, d}, {c, d} 
+            <p>{a, b, c}, {a, b, d}, {a, c, d}, {b, c, d} 
+            <p>{a, b, c, d}</p></td></center>
+          <td><center>16 = 2<sup>4</sup></td></center>
+          </tbody>
+          <tbody>
+          <td><center>{a, b, c, d, ...}</center></td>
+          <td><center>n</td></center>
+          <td><center>{ }<p>{a}, {b}, ...</p></td></center>
+          <td><center>2<sup>n</sup></td></center>
+          </tbody>
+        </ol>
+      </table>
+    <br>
+    <ol>
+    <p align="justify">Berdasarkan tabel di atas, dapat dilihat bahwa ada hubungan antara jumlah anggota suatu himpunan dengan jumlah himpunan bagian dari himpunan tersebut. Oleh karena itu, dapat diambil kesimpulan sebagai berikut. 
+    </p>
+    <br>
+    <p align="justify">Banyaknya semua himpunan bagian dari suatu himpunan adalah 2n, dengan n banyaknya anggota himpunan tersebut (Nuharini, 2007, p. 174).</p>
+    </ol>
+    <br>
+        <h3><strong>4.3 RANGKUMAN</strong></h3>
+      <ol>
+          <p>a. Himpunan A merupakan himpunan bagian B, jika setiap anggota A juga menjadi anggota B dan dinotasikan A ⊂ B atau B ⊃ A.</p>
+          <p>b. Himpunan A bukan merupakan himpunan bagian B, jika terdapat anggota A yang bukan anggota B dan dinotasikan A ⊄  B.</p>
+          <p>c. Setiap himpunan A merupakan himpunan bagian dari himpunan A sendiri, ditulis A ⊂  A.</p>
+          <p>d. Banyaknya semua himpunan bagian dari suatu himpunan adalah 2n , dengan n banyaknya anggota himpunan tersebut.</p>
       </ol>
       <br>
-      <h3><strong>A. Macam-macam Limas</strong></h3>
+      <br>
+      <h3><strong>4.4 LATIHAN</strong></h3>
       <ol>
-            <li>1. Limas Segitiga</li>
-          <p>Limas segitiga adalah limas yang memiliki alas berbentuk segitiga, baik segitiga sama sisi, segitiga sama kaki, mau pun segitiga siku-siku. Limas segitiga memiliki sisi selimut yang juga berbentuk segitiga.</p>
-          <br>
-            <li>2. Limas Segiempat</li>
-          <p>Limas segi empat adalah limas yang memiliki alas berbentuk segi empat, yaitu : persegi, persegi panjang, jajaran genjang, trapesium, belah ketupat, dan layang-layang. Macam-macam limas segi empat memiliki sisi selimut yang berbentuk segitiga.</li>
-            <br>
-            <br>
-        <li>3. Limas Segilima</li>
-          <p>Limas segilima adalah limas yang memiliki alas berbentuk segi lima dan memiliki sisi selimut yang berbentuk segitiga.</p>
-          <br>
-            <li>4. Limas Segienam</li>
-          <p>Limas segi enam adalah limas yang memiliki alas berbentuk segi enam dan memiliki sisi selimut yang berbentuk segitiga.</p>
-        </ol>
-    
-    <br>
-        <h3><strong>B. Unsur-unsur Limas</strong></h3>
-      <ol>
-            <li>1. Bidang atau Sisi</li>
-              <p>Bidang atau sisi adalah bangun datar yang membentuk bangun ruang.</p>
-            <ul>
-                      <li>a. Limas segitiga memiliki 4 bidang atau sisi. Pada gambar 5.1 bidang atau sisi pada limas segitiga, yaitu : Sisi alas (ABC), Sisi tegak (ADB, BDC, CDA).</li>
-                      <li>b. Limas segiempat memiliki 5 bidang atau sisi. Pada gambar 5.2 bidang atau sisi pada limas segiempat, yaitu : Sisi alas (ABCD), Sisi tegak (AEB, BEC, CED, DEA).</li>
-                      <li>c. Limas segilima memiliki 6 bidang atau sisi. Pada gambar 5.3 bidang atau sisi pada limas segilima, yaitu : Sisi alas (ABCDE), Sisi tegak (ATB, BTC, CTD, DTE, ETA).</li>
-                      <li>d. Limas segienam memiliki 7 bidang atau sisi. Pada gambar 5.4 bidang atau sisi pada limas segienam, yaitu : Sisi alas (ABCDEF), Sisi tegak (ATB, BTC, CTD, DTE, ETF, FTA).</li>
-                  </ul>
-                  <br>
-            <li>2. Rusuk</li>
-              <p>Rusuk adalah garis lurus pada tiap tepi.</p>
-            <ul>
-                      <li>a. Limas segitiga memiliki 6 rusuk. Pada gambar 5.1 rusuk pada limas segitiga, yaitu : Rusuk alas (AB, BC, CA), Rusuk tegak (AD, BD, CD).</li>
-                      <li>b. Limas segiempat memilki 8 rusuk. Pada gambar 5.2 rusuk pada limas segiempat, yaitu : Rusuk alas (AB, BC, CD, DA), Rusuk tegak (AE, BE, CE, DE).</li>
-                      <li>c. Limas segilima memiliki 10 rusuk. Pada gambar 5.3 rusuk pada limas segilima, yaitu : Rusuk alas (AB, BC, CD, DE, EA), Rusuk tegak (AT, BT, CT, DT, ET).</li>
-                      <li>d. Limas segienam memiliki 12 rusuk. Pada gambar 5.4 rusuk pada limas segienam, yaitu : Rusuk alas (AB, BC, CD, DE, EF, FA), Rusuk tegak (AT, BT, CT, DT, ET, FT).</li>
-                  </ul>    
-                  <br>
-            <li>3. Titik Sudut</li>
-              <p>Titik sudut adalah titik potong yang berada diantara dua rusuk.</p>
-            <ul>
-                      <li>a. Limas segitiga memiliki 4 titik sudut. Pada gambar 5.1 titik sudut pada limas segitiga, yaitu : A, B, C dan D.</li>
-                      <li>b.Limas segiempat memiliki 5 titik sudut. Pada gambar 5.2 titik sudut pada limas segiempat, yaitu : A, B, C, D dan E.</li>
-                      <li>c. Limas segilima memiliki 6 titik sudut. Pada gambar 5.3 titik sudut pada limas segilima, yaitu : A, B, C, D, E dan T.</li>
-                      <li>d. Limas segienam memiliki 7 titik sudut. Pada gambar 5.4 titik sudut pada limas segienam, yaitu : A, B, C, D, E, F dan T.</li>
-                    </ul>
-        </ol>
-    
-    <br>
-        <h3><strong>C. Sifat-sifat Limas</strong></h3>
-      <ol>
-        <li>1. Sifat-sifat Limas Segitiga</li>
-          <table border="3" cellpadding="10">
-          <tr bgcolor="dodgerblue">
-            <td><strong><center>No</center></strong></td>
-            <td><strong><center>Sifat Limas Segitiga</center></strong></td>
-            <td><strong><center>Bagian-bagian</center></strong></td>
-          </tr>
-          <tr>
-            <td bgcolor="lightblue">1.</td>
-            <td bgcolor="lightblue">Limas segitiga memiliki 4 bidang atau sisi.</td>
-            <td bgcolor="lightblue">Sisi alas (ABC), Sisi tegak (ADB, BDC, CDA).</td>
-          </tr>
-          <tr>
-            <td bgcolor="lightblue">2.</td>
-            <td bgcolor="lightblue">Limas segitiga memiliki 6 rusuk.</td>
-            <td bgcolor="lightblue">Rusuk alas (AB, BC, CA), Rusuk tegak (AD, BD, CD).</td>
-          </tr>
-          <tr>
-            <td bgcolor="lightblue">3.</td>
-            <td bgcolor="lightblue">Limas segitiga memiliki 4 titik sudut.</td>
-            <td bgcolor="lightblue">A, B, C dan D.</td>
-          </tr>
-          </table>
-          <br>
-        <li>2. Sifat-sifat Limas Segiempat</li>
-          <table border="3" cellpadding="10">
-          <tr bgcolor="dodgerblue">
-            <td><strong><center>No</center></strong></td>
-            <td><strong><center>Sifat Limas Segiempat</center></strong></td>
-            <td><strong><center>Bagian-bagian</center></strong></td>
-          </tr>
-          <tr>
-            <td bgcolor="lightblue">1.</td>
-            <td bgcolor="lightblue">Limas segiempat memiliki 5 bidang atau sisi.</td>
-            <td bgcolor="lightblue">Sisi alas (ABCD), Sisi tegak (AEB, BEC, CED, DEA).</td>
-          </tr>
-          <tr>
-            <td bgcolor="lightblue">2.</td>
-            <td bgcolor="lightblue">Limas segiempat memiliki 8 rusuk.</td>
-            <td bgcolor="lightblue">Rusuk alas (AB, BC, CD, DA), Rusuk tegak (AE, BE, CE, DE).</td>
-          </tr>
-          <tr>
-            <td bgcolor="lightblue">3.</td>
-            <td bgcolor="lightblue">Limas segiempat memiliki 5 titik sudut.</td>
-            <td bgcolor="lightblue">A, B, C, D dan E.</td>
-          </tr>
-          </table>
-          <br>
-        <li>3. Sifat-sifat Limas Segilima</li>
-          <table border="3" cellpadding="10">
-          <tr bgcolor="dodgerblue">
-            <td><strong><center>No</center></strong></td>
-            <td><strong><center>Sifat Limas Segilima</center></strong></td>
-            <td><strong><center>Bagian-bagian</center></strong></td>
-          </tr>
-          <tr>
-            <td bgcolor="lightblue">1.</td>
-            <td bgcolor="lightblue">Limas segilima memiliki 6 bidang atau sisi.</td>
-            <td bgcolor="lightblue">Sisi alas (ABCDE), Sisi tegak (ATB, BTC, CTD, DTE, ETA).</td>
-          </tr>
-          <tr>
-            <td bgcolor="lightblue">2.</td>
-            <td bgcolor="lightblue">Limas segilima memiliki 10 rusuk.</td>
-            <td bgcolor="lightblue">Rusuk alas (AB, BC, CD, DE, EA), Rusuk tegak (AT, BT, CT, DT, ET).</td>
-          </tr>
-          <tr>
-            <td bgcolor="lightblue">3.</td>
-            <td bgcolor="lightblue">Limas segilima memiliki 6 titik sudut.</td>
-            <td bgcolor="lightblue">A, B, C, D, E dan T..</td>
-          </tr>
-          </table>
-          <br>
-        <li>4. Sifat-sifat Limas Segienam</li>
-          <table border="3" cellpadding="10">
-          <tr bgcolor="dodgerblue">
-            <td><strong><center>No</center></strong></td>
-            <td><strong><center>Sifat Limas Segienam</center></strong></td>
-            <td><strong><center>Bagian-bagian</center></strong></td>
-          </tr>
-          <tr>
-            <td bgcolor="lightblue">1.</td>
-            <td bgcolor="lightblue">Limas segienam memiliki 7 bidang atau sisi.</td>
-            <td bgcolor="lightblue">Sisi alas (ABCDEF), Sisi tegak (ATB, BTC, CTD, DTE, ETF, FTA).</td>
-          </tr>
-          <tr>
-            <td bgcolor="lightblue">2.</td>
-            <td bgcolor="lightblue">Limas segienam memiliki 12 rusuk.</td>
-            <td bgcolor="lightblue">Rusuk alas (AB, BC, CD, DE, EF, FA), Rusuk tegak (AT, BT, CT, DT, ET, FT).</td>
-          </tr>
-          <tr>
-            <td bgcolor="lightblue">3.</td>
-            <td bgcolor="lightblue">Limas segienam memiliki 7 titik sudut.</td>
-            <td bgcolor="lightblue">A, B, C, D, E, F dan T.</td>
-          </tr>
-          </table>
+      <p align="justify">Tentukan himpunan bagian dari P = {bilangan prima antara 2 dan 20} berikut ini dengan mendaftar anggota-anggotanya. 
+        <p>a. Himpunan bilangan ganjil anggota P. 
+        <p>b. Himpunan bilangan genap anggota P. 
+        <p>c. Himpunan anggota P yang kurang dari 10. 
+        <p>d. Himpunan anggota P yang lebih dari 7.
+      </p>
       </ol>
-    
-    <br>
-      <h3><strong>D. Luas Permukaan Limas</strong></h3>
+      <h3><strong>JAWABAN</strong></h3>
       <ol>
-        <p>Luas permukaan dapat ditentukan dengan menjumlahkan luas sisi-sisi tegak dengan sisi alas. Maka rumus luas permukaan limas adalah L = jumlah luas sisi tegak + luas alas.</p>
-        <p>
-          Luas Permukaan Limas = jumlah luas sisi tegak + luas alas
+        <p>a) Bilangan ganjil antara 2 dan 20 adalah 3,5,7,9,11,13,15,17,19. Maka P = {3,5,7,11,13,15,17,19}
+        <p>b) bilangan genap antara 2 dan 20 adalah 4,6,8,10,12,14,16,18. Maka P = {4,6,8,10,12,14,16,18}
+        <p>c) bilangan prima antara 2 dan 20 adalah 3,5,7,11,13,17,19. Maka bilangan prima yang kurang dari 10, yaitu P = { 3,5,7}
+        <p>d) bilangan prima antara 2 dan 20 adalah 3,5,7,11,13,17,19. Maka bilangan prima yang lebih dari 7, yaitu P = { 11,13,17,19}
         </p>
-      </ol>
-    
-    <br>
-      <h3><strong>E. Volume Limas</strong></h3>
-      <ol>
-        <p>Volume limas dapat ditentukan membelah sebuah kubus berisi r menjadi 6 buah limas yang kongruen. Maka rumus volume adalah V = 1/3 x luas alas x tinggi.</p>
-        <p>
-          Volume Limas = 1/3 x luas alas x tinggi
-        </p>
-      </ol> 
-    
-    <br>
-      <h3><strong>F. Jaring-jaring Limas</strong></h3>
-      <ol>
-        <p>Jaring-jaring limas adalah pembelahan sebuah bangun ruang limas menjadi beberapa bangun datar yang saling berkaitan. Dan apabila bangun datar yag berkaitkan digabungkan maka akan menjadi suatu bangun ruang yang dinamakan limas.</p>
-        <li>1. Jaring-jaring Limas Segitiga</li>
-      </ol>
-    
-    <br>
-      <h3><strong>G. Ringkasan Limas</strong></h3>
-      <ol>
-        <p>Limas adalah bangun ruang yang hanya memiliki sisi alas dan diselimuti oleh beberapa sisi tegak yang berbentuk segitiga serta memiliki titik puncak. Nama dari limas tergantung dari alas limas.</p>
-        <li>1. Unsur-unsur Limas segi n beraturan</li>
-        <ul>
-          <li>a. Banyak rusuk = (2n) buah.</li>
-          <li>b. Banyak sisi = (n + 1) buah.</li>
-          <li>c. Banyak titik sudut = (n + 1) buah</li>
-        </ul>
-        <br>
-        <li>2. Rumus pada Limas</li>
-        <ul>
-          <li>a. Luas permukaan = luas alas + jumlah luas sisi tegak</li>
-          <li>b. Volume = 1/3 x luas alas x tinggi</li>
-        </ul>
-      </ol>
-    
-    <br>
-      <h3><strong>H. Latihan</strong></h3>
-      <ol>
-        <li>1. Diketahui sebuah limas memiliki alas berbentuk segitiga dengan panjang 9cm dan tingginya 12cm. Jika tinggi limas 15cm, maka volumenya .... cm<sup>3</sup></li>
-        <br>
-        <li>2. Sebuah limas segitiga sama sisi mempunyai sisi alas 12cm dan tinggi alas 8cm. Jika tinggi sisi tegak segitiga selimut adalah 20cm, maka luas permukaan limas tersebut ....  cm<sup>2</sup></li>
-        <br>
-        <li>3. Sebuah limas segi empat memiliki alas berbentuk persegi dengan panjang sisi 50cm. Jika tinggi sisi tegak 75cm, maka luas permukaannya ....  cm<sup>2</sup></li>
-        <br>
-        <li>4. Sebuah limas segi lima memiliki tinggi 60cm dan luas alas dengan 200cm<sup>3</sup>. Hitunglah volume dari limas dengan menggunakan rumus yang telah ditentukan.</li>
-        <br>
-        <li>5. Diketahui sebuah bangun limas persegi mempunyai tinggi sisi tegak limas 20cm dan panjang diagonal alas limas 16cm. Carilah tinggi limas segi empat tersebut!</li>
-      </ol>
+        </ol>
       </font> 
       </section>
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
       </body>
-    </html>
+      {% endblock %}

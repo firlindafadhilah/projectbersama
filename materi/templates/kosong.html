@@ -1,15 +1,7 @@
+{% extends 'base.html' %}
 {% load static %}
+{% block content %}
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>UNTIRTA</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-  </head>
-
-<body>
     <!--bagian navbar-->
     <nav class="navbar navbar-expand-lg" style="background-color:#000000;">
       <div class="container-fluid">
@@ -29,7 +21,7 @@
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:	#FFFFFF">
                 HIMPUNAN
               </a>
-              <ul class="dropdown-menu dropdown-menu-dark" style="background-color:#ffffff;">
+              <ul class="dropdown-menu" style="background-color:#ffffff;">
                 <li><a class="dropdown-item {% if dropdown == 'pendahuluan' %} active {% endif %}" href="{% url 'pendahuluan' %}" style="color:	#000000">PENDAHULUAN</a></li>
 
                 <li><a class="dropdown-item {% if dropdown == 'notasi' %} active {% endif %}" href="{% url 'notasi' %}" style="color:	#000000">KONSEP DAN NOTASI HIMPUNAN</a></li>
@@ -87,7 +79,7 @@
       <br>
       <ol>
         <h3><strong>3.2 HIMPUNAN SEMESTA</strong></h3>
-        <img src="https://i.postimg.cc/cLd89NPR/img-buah-buahan.jpg" width ="350px" height="250px"></center>
+        <img src="https://i.postimg.cc/cLd89NPR/img-buah-buahan.jpg" width ="350px" height="250px">
         <br>
         <br>
         <p align="justify">Jika B = {strawberry, jeruk, apel, anggur} maka himpunan semesta dari himpunan B adalah himpunan S = {buah-buahan}. Dengan kata lain, S adalah himpunan semesta dari B. Himpunan S memuat semua anggota himpunan B.</p>
@@ -114,11 +106,6 @@
         <h3><strong>JAWABAN</strong></h3>
         <p>A = {1, 4, 9, 16, 25}
         <p>himpunan semestanya S = {x|x², x ∈ bilangan asli}
-        <p>B = {1, 3, 5, 7}
-        <p>himpunan semestanya S = {bilangan ganjil}
-        <p>C = {m, dm, cm, mm}
-        <p>himpunan semestanya S = {satuan ukuran panjang}
-        <p>D = {kerucut, tabung, bola}
         <p>himpunan semestanya S = {bangun ruang}
           </p>
 
@@ -127,4 +114,4 @@
     </section>
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
       </body>
-    </html>
+      {% endblock %}
