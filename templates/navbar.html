@@ -1,10 +1,10 @@
 {% load static %}
 
 
-<nav class="navbar navbar-expand-lg bg-light">
+<nav class="navbar navbar-expand-lg" style="background-color:#8FBC8F;">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-            <img class="nav-logo" src="{% static 'logo.png' %}" alt="logo untirta">
+        <a class="navbar-brand" href="/">
+            <img class="nav-logo" src="{% static 'logo.png' %}" width="60" alt="logo">
         </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -12,25 +12,48 @@
       <div class="collapse navbar-collapse" id="navbarScroll">
         <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" href="#">TENTANG</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Link
+              HIMPUNAN
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="/profile">PROFILE</a></li>
-              <li><a class="dropdown-item" href="#">HIMPUNAN</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">TENTANG</a></li>
-            </ul>
+              <li><a class="dropdown-item" href="#">PENDAHULUAN</a></li>
+
+              <li><a class="dropdown-item" href="#">KONSEP DAN NOTASI HIMPUNAN</a></li>
+
+              <li><a class="dropdown-item" href="#">HIMPUNAN KOSONG DAN HIMPUNAN SEMESTA</a></li>
+
+              <li><a class="dropdown-item" href="#">HIMPUNAN BAGIAN</a></li>
+
+              <li><a class="dropdown-item" href="#">HUBUNGAN ANTAR HIMPUNAN</a></li>
+                
+              <li><a class="dropdown-item" href="#">OPERASI HIMPUNAN</a></li>
+
+              <li><a class="dropdown-item" href="#">DIAGRAM VENN</a></li>
+              </ul>
           </li>
-          <li class="nav-item">
-            <a class="nav-link disabled">Link</a>
-          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              SPLDV
+            </a>
+            <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Perbedaan SPLDV dan PLDV</a></li>
+            <li><a class="dropdown-item" href="#">Memahami SPLDV Metode Grafik</a></li>
+            <li><a class="dropdown-item" href="#">Memahami SPLDV Metode Eliminasi</a></li>
+            <li><a class="dropdown-item" href="#">Memahami SPLDV Metode Substitusi</a></li>
+            <li><a class="dropdown-item" href="#">Memahami SPLDV Metode Gabungan</a></li>
+          </ul>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Bangun Ruang Sisi Datar
+            </a>
+            <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">KUBUS</a></li>
+            <li><a class="dropdown-item" href="#">BALOK</a></li>
+            <li><a class="dropdown-item" href="#">LIMAS</a></li>
+            <li><a class="dropdown-item" href="#">PRISMA</a></li>
         </ul>
         <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
