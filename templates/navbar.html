@@ -13,23 +13,24 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <div class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">TENTANG</a>
+          <a class="nav-link active {% if navbar == 'tentang' %} active {% endif %}" href="{% url 'tentang' %}">TENTANG</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#"role="button" data-bs-toggle="dropdown" aria-expanded="false">HIMPUNAN</a>
-          <ul class="dropdown-menu">            <li><a class="dropdown-item" href="#">PENDAHULUAN</a></li>
+          <ul class="dropdown-menu">            
+          <li><a class="dropdown-item {% if dropdown == 'pendahuluan' %} active {% endif %}" href="{% url 'pendahuluan' %}">PENDAHULUAN</a></li>
+          
+          <li><a class="dropdown-item {% if dropdown == 'notasi' %} active {% endif %}" href="{% url 'notasi' %}">KONSEP DAN NOTASI HIMPUNAN</a></li>
 
-          <li><a class="dropdown-item" href="#">KONSEP DAN NOTASI HIMPUNAN</a></li>
+          <li><a class="dropdown-item {% if dropdown == 'kosong' %} active {% endif %}" href="{% url 'kosong' %}">HIMPUNAN KOSONG DAN HIMPUNAN SEMESTA</a></li>
 
-          <li><a class="dropdown-item" href="#">HIMPUNAN KOSONG DAN HIMPUNAN SEMESTA</a></li>
+          <li><a class="dropdown-item {% if dropdown == 'bagian' %} active {% endif %}" href="{% url 'bagian' %}">HIMPUNAN BAGIAN</a></li>
 
-          <li><a class="dropdown-item" href="#">HIMPUNAN BAGIAN</a></li>
-
-          <li><a class="dropdown-item" href="#">HUBUNGAN ANTAR HIMPUNAN</a></li>
+          <li><a class="dropdown-item {% if dropdown == 'hubungan' %} active {% endif %}" href="{% url 'hubungan' %}">HUBUNGAN ANTAR HIMPUNAN</a></li>
               
-          <li><a class="dropdown-item" href="#">OPERASI HIMPUNAN</a></li>
+          <li><a class="dropdown-item {% if dropdown == 'operasi' %} active {% endif %}" href="{% url 'operasi' %}">OPERASI HIMPUNAN</a></li>
 
-          <li><a class="dropdown-item" href="#">DIAGRAM VENN</a></li>
+          <li><a class="dropdown-item {% if dropdown == 'diagram' %} active {% endif %}" href="{% url 'diagram' %}">DIAGRAM VENN</a></li>
         </ul>
         </li>
         <li class="nav-item dropdown">
@@ -37,11 +38,11 @@
             SPLDV
           </a>
           <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">Perbedaan SPLDV dan PLDV</a></li>
-          <li><a class="dropdown-item" href="#">Memahami SPLDV Metode Grafik</a></li>
-          <li><a class="dropdown-item" href="#">Memahami SPLDV Metode Eliminasi</a></li>
-          <li><a class="dropdown-item" href="#">Memahami SPLDV Metode Substitusi</a></li>
-          <li><a class="dropdown-item" href="#">Memahami SPLDV Metode Gabungan</a></li>
+          <li><a class="dropdown-item {% if dropdown == 'perbedaan' %} active {% endif %}" href="{% url 'perbedaan' %}">Perbedaan SPLDV dan PLDV</a></li>
+          <li><a class="dropdown-item {% if dropdown == 'grafik' %} active {% endif %}" href="{% url 'grafik' %}">Memahami SPLDV Metode Grafik</a></li>
+          <li><a class="dropdown-item {% if dropdown == 'eliminasi' %} active {% endif %}" href="{% url 'eliminasi' %}">Memahami SPLDV Metode Eliminasi</a></li>
+          <li><a class="dropdown-item {% if dropdown == 'substitusi' %} active {% endif %}" href="{% url 'substitusi' %}">Memahami SPLDV Metode Substitusi</a></li>
+          <li><a class="dropdown-item {% if dropdown == 'gabungan' %} active {% endif %}" href="{% url 'gabungan' %}">Memahami SPLDV Metode Gabungan</a></li>
         </ul>
         </li>
         <li class="nav-item dropdown">
@@ -49,14 +50,14 @@
             Bangun Ruang Sisi Datar
           </a>
           <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">KUBUS</a></li>
-          <li><a class="dropdown-item" href="#">BALOK</a></li>
-          <li><a class="dropdown-item" href="#">LIMAS</a></li>
-          <li><a class="dropdown-item" href="#">PRISMA</a></li>
+          <li><a class="dropdown-item {% if dropdown == 'kubus' %} active {% endif %}" href="{% url 'kubus' %}">KUBUS</a></li>
+          <li><a class="dropdown-item {% if dropdown == 'balok' %} active {% endif %}" href="{% url 'balok' %}">BALOK</a></li>
+          <li><a class="dropdown-item {% if dropdown == 'limas' %} active {% endif %}" href="{% url 'limas' %}">LIMAS</a></li>
+          <li><a class="dropdown-item {% if dropdown == 'prisma' %} active {% endif %}" href="{% url 'prisma' %}">PRISMA</a></li>
       </ul>
       </li>
       <li class="nav-item">
-      <a class="nav-item btn btn-success tombol" href="#">JOIN US</a>
+      <a class="nav-item btn btn-success tombol" href="">JOIN US</a>
     </li>
     </div>
     </div>

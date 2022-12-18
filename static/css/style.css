@@ -6,6 +6,10 @@
   font-family: 'Poppins';
 }
 
+.heading {
+  font-size: 3rem;
+}
+
 body {
   min-height: 2000px;
 }
@@ -25,6 +29,9 @@ body {
 
 /* DESKTOP VERSION */
 @media (min-width: 992px) {
+  .navbar-brand, .nav-link {
+  color: black !important;
+  }
 .nav-link {
   text-transform: uppercase;
   margin-right: 30px;
@@ -34,9 +41,33 @@ body {
   content: '';
   display :block;
   border-bottom: 3px solid #0B63Dc;
-  width: 50%
+  width: 50%;
   margin: auto;
   padding-bottom: 5px;
   margin-bottom: -8px;
 }
+}
+/* akhir desktop */
+
+.card-body-icon {
+  position: absolute;
+  z-index: 0;
+  top: 25px;
+  right: 4px;
+  opacity: 0.4;
+  font-size: 90px;
+  width: 50%;
+}
+
+.heading {
+  text-align: center;
+  font-size: 4rem;
+  color: #333;
+  padding: 1rem;
+  margin: 2rem 0;
+  background:rgba(255, 51, 153,.05);
+}
+
+.heading span {
+  color:var(--green);
 }
